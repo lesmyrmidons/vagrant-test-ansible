@@ -13,6 +13,7 @@
     - group_vars/all.yml
 
   roles:
+    - common
     - role: ansible-role-php
       php_memory_limit: "128M"
       php_max_execution_time: "30"

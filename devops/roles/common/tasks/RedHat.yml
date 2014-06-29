@@ -1,0 +1,11 @@
+---
+
+- name: yum check-update
+  shell: 'yum check-update || test $? -eq 100'
+
+- name: Linux | Upgrade
+  yum: name=* state=latest
+
+- name: Package | Install lists packages
+  yum: name={{ item }} state=present
+  with_items: {{ common_packages }}

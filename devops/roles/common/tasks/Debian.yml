@@ -1,0 +1,11 @@
+---
+
+- name: Linux | Update cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Linux | Upgrade
+  apt: upgrade=dist
+
+- name: Package | Install lists packages
+  apt: pkg={{ item }} state=installed
+  with_items: common_packages
