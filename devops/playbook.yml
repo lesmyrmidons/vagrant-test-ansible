@@ -1,0 +1,21 @@
+##
+# Ansible playbook for setting up testing development roles ansible on three platform CentOS, Debian and Ubuntu server.
+#
+
+---
+- hosts: all
+  max_fail_percentage: 30
+  serial: 10
+  user: vagrant
+  sudo: yes
+
+  vars_files:
+    - group_vars/all.yml
+
+  roles:
+    - role: ansible-role-php
+      php_memory_limit: "128M"
+      php_max_execution_time: "30"
+      php_upload_max_filesize: "64M"
+      php_date_timezone: "Europe/Paris"
+      php_enable_webserver: false
