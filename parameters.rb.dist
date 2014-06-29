@@ -1,0 +1,7 @@
+module MyVars
+
+    PATH_SHARE_FOLDER = "."
+    PATH_MOUNT_FOLDER = "/vagrant"
+    ANSIBLE_VERBOSE = "-vvv"
+
+end
