@@ -45,6 +45,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.inventory_path = "devops/hosts"
     ansible.playbook = "devops/playbook.yml"
     ansible.verbose = ANSIBLE_VERBOSE
-    ansible.limit = 'all'
+    # ansible.limit = 'all'
   end
 end

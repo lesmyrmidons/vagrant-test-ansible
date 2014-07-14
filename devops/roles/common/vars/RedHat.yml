@@ -1,8 +1,5 @@
 ---
 
 common_packages:
-  - bash-completion
   - wget
-  - htop
-  - ack-grep
-  - ccze
+  - curl
