@@ -1,2 +1,3 @@
 .vagrant/
+devops/roles/ansible-role-*
 parameters.rb
