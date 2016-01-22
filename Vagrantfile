@@ -8,7 +8,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.define "debian" do |debian_config|
-    debian_config.vm.box = "chef/debian-7.4"
+    debian_config.vm.box = "oar-team/debian8"
     # debian_config.vm.box_url = "http://downloads.shadoware.org/wheezy64.box"
     debian_config.vm.hostname = 'debian'
     debian_config.vm.network :"private_network", ip: "192.168.110.20"
