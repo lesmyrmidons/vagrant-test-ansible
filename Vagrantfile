@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "centos" do |centos_config|
-    centos_config.vm.box = "chef/centos-6.5"
+    centos_config.vm.box = "centos/6"
     centos_config.vm.hostname = 'centos'
     centos_config.vm.network :"private_network", ip: "192.168.110.21"
     centos_config.vm.synced_folder PATH_SHARE_FOLDER, PATH_MOUNT_FOLDER, disabled: true, type: "nfs"

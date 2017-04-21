@@ -6,8 +6,7 @@
 - hosts: all
   max_fail_percentage: 30
   serial: 10
-  user: vagrant
-  sudo: yes
+  become: true
 
   vars_files:
     - group_vars/all.yml
@@ -15,10 +14,10 @@
   roles:
     - common
     - role: ansible-role-mongodb
-    - role: ansible-role-php
-      php_env: "dev"
-      php_memory_limit: "128M"
-      php_max_execution_time: "30"
-      php_upload_max_filesize: "64M"
-      php_date_timezone: "Europe/Paris"
-      php_enable_webserver: false
+#    - role: ansible-role-php
+#      php_env: "dev"
+#      php_memory_limit: "128M"
+#      php_max_execution_time: "30"
+#      php_upload_max_filesize: "64M"
+#      php_date_timezone: "Europe/Paris"
+#      php_enable_webserver: false

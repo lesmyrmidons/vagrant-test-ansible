@@ -1,3 +1,4 @@
 .vagrant/
 devops/roles/ansible-role-*
 parameters.rb
+devops/playbook.retry
