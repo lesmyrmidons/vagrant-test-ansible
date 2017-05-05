@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "ubuntu" do |ubuntu_config|
-    ubuntu_config.vm.box = "chef/ubuntu-14.04"
+    ubuntu_config.vm.box = "ubuntu/trusty64"
     ubuntu_config.vm.hostname = 'ubuntu'
     ubuntu_config.vm.network :"private_network", ip: "192.168.110.22"
     ubuntu_config.vm.synced_folder PATH_SHARE_FOLDER, PATH_MOUNT_FOLDER, disabled: true, type: "nfs"

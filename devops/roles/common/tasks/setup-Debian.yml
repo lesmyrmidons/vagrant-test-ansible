@@ -8,4 +8,4 @@
 
 - name: Package | Install lists packages
   apt: pkg={{ item }} state=installed
-  with_items: common_packages
+  with_items: "{{ common_packages }}"
